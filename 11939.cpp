@@ -17,11 +17,6 @@ public:
         this->operandOne_ = this->operandTwo_ = 0.0;
     }
     
-    Operand(double operandOne, double operandTwo) {
-        this->operandOne_ = operandOne;
-        this->operandTwo_ = operandTwo;
-    }
-    
     /**
     *
     * This method accepts the input stream as an
