@@ -1,3 +1,12 @@
+/*
+* Fahad Zia Khan - 11939
+* BSSE - 5th Semester
+* Section - D
+*/
+
+#if __cplusplus < 201103L
+    #error This file can only be compiled with a c++11 compiler. Or use online c++ compilers to run the file.
+#else 
 #include <iostream>
 #include <cmath>
 
@@ -42,12 +51,13 @@ private:
 
 
 
-// main function . . .
+/*
+* main function . . .
+*/
 int main() {
     while(true) {
-        /*
-        * Use only this command, if we are on windows platform.
-        */
+        
+        // Use only this command, if we are on windows platform.
         #ifdef _WIN32
             system("cls");
         #endif
@@ -159,3 +169,4 @@ int main() {
     }
     return 0;
 }
+#endif
