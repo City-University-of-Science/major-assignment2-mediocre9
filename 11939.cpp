@@ -144,7 +144,7 @@ int main() {
             break;
 
         case 15:
-            result = std::log(operand.setOperandOne(std::cin).getOperandOne());
+            result = std::log10(operand.setOperandOne(std::cin).getOperandOne());
             break;
 
         default:
