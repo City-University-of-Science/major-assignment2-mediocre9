@@ -17,6 +17,11 @@ public:
         this->operandOne_ = this->operandTwo_ = 0.0;
     }
     
+    Operand(double operandOne, double operandTwo) {
+        this->operandOne_ = operandOne;
+        this->operandTwo_ = operandTwo;
+    }
+    
     /**
     *
     * This method accepts the input stream as an
@@ -82,6 +87,7 @@ int main() {
             "13. Asin",
             "14. Atan",
             "15. Logarithm",
+            "16. Average",
             "\nSelect Choice : ",
         };
 
@@ -156,6 +162,27 @@ int main() {
         case 15:
             result = std::log10(operand.setOperandOne(std::cin).getOperandOne());
             break;
+            
+        case 16: {
+            int limit = 0;
+            
+            std::cout << "\nEnter Limit : ";
+            std::cin >> limit;
+            
+            int array[limit] ;
+            
+            for (int i = 0 ; i < limit ; ++i) {
+                array[i] = Operand().setOperandOne(std::cin).getOperandOne();
+            }
+            
+            for (int& i : array) {
+                result += i;
+            }
+            
+            result /= limit; 
+            
+            break;
+        }
 
         default:
             std::cout << "Invalid Input. Input Range is from (1-14)!";
