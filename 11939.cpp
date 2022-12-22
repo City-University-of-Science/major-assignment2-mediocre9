@@ -36,5 +36,40 @@ private:
 };
 
 int main() {
+    	/*
+    	* Use only this command, if we are on windows platform.
+		*/
+    	#ifdef _WIN32
+        	system("cls");
+        #endif
+        
+        Operand operand;
+        int input = 0;
+        double result = 0;
+
+        std::string menuItems_[] = {
+            "1.  Addition",
+            "2.  Subtract",
+            "3.  Multiplication",
+            "4.  Division",
+            "5.  Percentage",
+            "6.  Power",
+            "7.  Square Root",
+            "8.  Cube",
+            "9.  Sin",
+            "10. Cos",
+            "11. Tan",
+            "12. Acos",
+            "13. Asin",
+            "14. Atan",
+            "15. Logarithm",
+            "\nSelect Choice : ",
+        };
+
+        for (std::string & item: menuItems_) {
+            std::cout << item << std::endl;
+        }
+        
+        std::cin >> input;
     return 0;
 }
