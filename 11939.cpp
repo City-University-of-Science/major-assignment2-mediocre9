@@ -3,45 +3,45 @@
 
 class Operand {
 public:
-	
-	Operand() {}
-	
-	Operand(Operand& operand) {
-		this->operandOne_ = operand.getOperandOne();
-		this->operandTwo_ = operand.getOperandTwo();
-	}
-	
-	Operand& setOperandOne(std::istream& inputStream) {
-		std::cout << "Enter the Value : ";
-		inputStream >> this->operandOne_;
-		return *this;
-	}
-	
-	Operand& setOperandTwo(std::istream& inputStream) {
-		std::cout << "Enter the Second Value : ";
-		inputStream >> this->operandTwo_;
-		return *this;
-	}
-	
-	double getOperandOne() const { 
-		return this->operandOne_; 
-	}
-	
-	double getOperandTwo() const { 
-		return this->operandTwo_; 
-	}
+    
+    Operand() {}
+    
+    Operand(Operand& operand) {
+        this->operandOne_ = operand.getOperandOne();
+        this->operandTwo_ = operand.getOperandTwo();
+    }
+    
+    Operand& setOperandOne(std::istream& inputStream) {
+        std::cout << "Enter the Value : ";
+        inputStream >> this->operandOne_;
+        return *this;
+    }
+    
+    Operand& setOperandTwo(std::istream& inputStream) {
+        std::cout << "Enter the Second Value : ";
+        inputStream >> this->operandTwo_;
+        return *this;
+    }
+    
+    double getOperandOne() const { 
+        return this->operandOne_; 
+    }
+    
+    double getOperandTwo() const { 
+        return this->operandTwo_; 
+    }
 private:
-	double operandOne_;
-	double operandTwo_;
+    double operandOne_;
+    double operandTwo_;
 };
 
 int main() {
     while(true) {
-    	/*
-    	* Use only this command, if we are on windows platform.
-		*/
-    	#ifdef _WIN32
-        	system("cls");
+        /*
+        * Use only this command, if we are on windows platform.
+        */
+        #ifdef _WIN32
+            system("cls");
         #endif
         
         Operand operand;
@@ -96,7 +96,7 @@ int main() {
             break;
 
         case 6: {
-        	double value = operand.setOperandOne(std::cin).getOperandOne();
+            double value = operand.setOperandOne(std::cin).getOperandOne();
             result = value * value;
             break;
         }
@@ -106,7 +106,7 @@ int main() {
             break;
 
         case 8:{
-        	double value = operand.setOperandOne(std::cin).getOperandOne();
+            double value = operand.setOperandOne(std::cin).getOperandOne();
             result = value * value * value;
             break;
         }
