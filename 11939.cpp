@@ -36,6 +36,7 @@ private:
 };
 
 int main() {
+    while(true) {
     	/*
     	* Use only this command, if we are on windows platform.
 		*/
@@ -89,12 +90,64 @@ int main() {
         case 4:
             result = operand.setOperandOne(std::cin).getOperandOne() / operand.setOperandTwo(std::cin).getOperandTwo();
             break;
-            
+
+        case 5:
+            result = (operand.setOperandOne(std::cin).getOperandOne() / operand.setOperandTwo(std::cin).getOperandTwo()) * 100;
+            break;
+
+        case 6: {
+        	double value = operand.setOperandOne(std::cin).getOperandOne();
+            result = value * value;
+            break;
+        }
+
+        case 7:
+            result = std::sqrt(operand.setOperandOne(std::cin).getOperandOne());
+            break;
+
+        case 8:{
+        	double value = operand.setOperandOne(std::cin).getOperandOne();
+            result = value * value * value;
+            break;
+        }
+
+        case 9:
+            result = std::sin(operand.setOperandOne(std::cin).getOperandOne());
+            break;
+
+        case 10:
+            result = std::cos(operand.setOperandOne(std::cin).getOperandOne());
+            break;
+
+        case 11:
+            result = std::tan(operand.setOperandOne(std::cin).getOperandOne());
+            break;
+
+        case 12:
+            result = std::acos(operand.setOperandOne(std::cin).getOperandOne());
+            break;
+
+        case 13:
+            result = std::asin(operand.setOperandOne(std::cin).getOperandOne());
+            break;
+
+        case 14:
+            result = std::atan(operand.setOperandOne(std::cin).getOperandOne());
+            break;
+
+        case 15:
+            result = std::log(operand.setOperandOne(std::cin).getOperandOne());
+            break;
+
         default:
             std::cout << "Invalid Input. Input Range is from (1-14)!";
             std::cin.ignore();
             std::cin.get();
             main();
         }
+        std::cout << "Answer : " << result;
+        std::cin.ignore();
+        std::cin.get();
+    }
     return 0;
 }
