@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 
+template <typename T>
 class Operand {
 public:
 	
@@ -23,16 +24,16 @@ public:
 		return *this;
 	}
 	
-	double getOperandOne() const { 
+	const T& getOperandOne() const { 
 		return this->operandOne_; 
 	}
 	
-	double getOperandTwo() const { 
+	const T& getOperandTwo() const { 
 		return this->operandTwo_; 
 	}
 private:
-	double operandOne_;
-	double operandTwo_;
+	T operandOne_;
+	T operandTwo_;
 };
 
 int main() {
@@ -89,7 +90,7 @@ int main() {
         case 4:
             result = operand.setOperandOne(std::cin).getOperandOne() / operand.setOperandTwo(std::cin).getOperandTwo();
             break;
-            
+
         default:
             std::cout << "Invalid Input. Input Range is from (1-14)!";
             std::cin.ignore();
