@@ -4,13 +4,18 @@
 class Operand {
 public:
     
-    Operand() {}
-    
-    Operand(Operand& operand) {
-        this->operandOne_ = operand.getOperandOne();
-        this->operandTwo_ = operand.getOperandTwo();
+    Operand() {
+        this->operandOne_ = this->operandTwo_ = 0.0;
     }
     
+    /**
+    *
+    * This method accepts the input stream as an
+    * argument.
+    * It means that to get the user input we can pass
+    * [std::cin] as an argument to read the values.
+    * 
+    */
     Operand& setOperandOne(std::istream& inputStream) {
         std::cout << "Enter the Value : ";
         inputStream >> this->operandOne_;
@@ -35,6 +40,9 @@ private:
     double operandTwo_;
 };
 
+
+
+// main function . . .
 int main() {
     while(true) {
         /*
@@ -48,7 +56,7 @@ int main() {
         int input = 0;
         double result = 0;
 
-        std::string menuItems_[] = {
+        std::string menuItems[] = {
             "1.  Addition",
             "2.  Subtract",
             "3.  Multiplication",
@@ -67,7 +75,7 @@ int main() {
             "\nSelect Choice : ",
         };
 
-        for (std::string & item: menuItems_) {
+        for (std::string & item: menuItems) {
             std::cout << item << std::endl;
         }
         
