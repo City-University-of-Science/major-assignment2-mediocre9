@@ -71,5 +71,30 @@ int main() {
         }
         
         std::cin >> input;
+
+        switch (input) {
+
+        case 1:
+            result = operand.setOperandOne(std::cin).getOperandOne() + operand.setOperandTwo(std::cin).getOperandTwo();
+            break;
+
+        case 2:
+            result = operand.setOperandOne(std::cin).getOperandOne() - operand.setOperandTwo(std::cin).getOperandTwo();
+            break;
+
+        case 3:
+            result = operand.setOperandOne(std::cin).getOperandOne() * operand.setOperandTwo(std::cin).getOperandTwo();
+            break;
+
+        case 4:
+            result = operand.setOperandOne(std::cin).getOperandOne() / operand.setOperandTwo(std::cin).getOperandTwo();
+            break;
+            
+        default:
+            std::cout << "Invalid Input. Input Range is from (1-14)!";
+            std::cin.ignore();
+            std::cin.get();
+            main();
+        }
     return 0;
 }
